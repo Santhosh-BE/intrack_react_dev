@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import FeatureCard from './FeatureCard';
 import { Bell, Building2, Users, TriangleAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const features = [
     {
@@ -74,9 +75,11 @@ const Hero = () => {
                     </div>
 
                     <motion.div variants={itemVariants} className="flex items-center gap-4">
-                        <Button className="bg-[#3B9DF8] hover:bg-blue-600 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
-                            Log In
-                        </Button>
+                        <Link to="/login">
+                            <Button className="bg-[#3B9DF8] hover:bg-blue-600 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
+                                Log In
+                            </Button>
+                        </Link>
                     </motion.div>
 
                     <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-4 text-xs md:text-sm font-medium text-gray-500">
