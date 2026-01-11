@@ -1,9 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import logo from '../assets/Intrack_logo.png'
 
 const Navbar = () => {
     return (
-        <nav className="flex items-center justify-between px-6 py-4 bg-background max-w-7xl mx-auto">
+        <motion.nav
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="flex items-center justify-between px-6 py-4 bg-background max-w-7xl mx-auto"
+        >
             <div className="flex items-center gap-2">
                 <div className="w-16 h-16 relative">
                     <img src={logo} alt="Inctrack Logo" className="w-full h-full object-contain" />
@@ -17,7 +23,7 @@ const Navbar = () => {
             {/* The screenshot doesn't explicitly show right-side nav items, but "Log In" is in the hero. 
                 Common pattern is to have nothing or basic links. I'll stick to just the logo area 
                 as per screenshot focus on the hero content. */}
-        </nav>
+        </motion.nav>
     );
 };
 
