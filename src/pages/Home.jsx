@@ -1,18 +1,18 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
 
 const Home = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-primary-50">
-            <h1 className="text-4xl font-bold text-primary-600 mb-4 font-sans">Welcome to InTrack</h1>
-            <p className="text-lg text-secondary mb-8">React + Vite + Tailwind CSS</p>
-
-            {/* Example Button using Primary Color */}
-            <button className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors shadow-lg">
-                Get Started
-            </button>
-
-            <div className="mt-8 p-4 border-2 border-lovely rounded text-lovely">
-                Lovely Color Box
+        <div className="min-h-screen bg-white font-sans">
+            <Navbar />
+            <main>
+                <Hero />
+            </main>
+            {/* Background decoration - optional based on design (screenshot has some faint circles) */}
+            <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+                <div className="absolute -top-20 -left-20 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-3xl opacity-60"></div>
+                <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-50/30 rounded-full blur-3xl opacity-60"></div>
             </div>
         </div>
     );
