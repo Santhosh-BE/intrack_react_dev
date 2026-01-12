@@ -12,11 +12,11 @@ const ForgotPassword = () => {
 
     return (
         <AuthLayout>
-            <div className="min-h-full flex flex-col justify-center items-center p-6 lg:p-12">
-                <div className="w-full max-w-md space-y-6">
+            <div className="min-h-full flex flex-col items-center p-6 lg:p-8">
+                <div className="w-full max-w-md space-y-4 my-auto">
                     {/* Logo & Back Link */}
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2">
                             <div className="w-12 h-12 relative shrink-0">
                                 <img src={logo} alt="Inctrack Logo" className="w-full h-full object-contain" />
                             </div>
@@ -28,34 +28,34 @@ const ForgotPassword = () => {
 
                         <button
                             onClick={() => navigate('/login')}
-                            className="flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors"
+                            className="flex items-center text-xs text-gray-500 hover:text-gray-900 transition-colors"
                         >
-                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
                             Back to Login
                         </button>
                     </div>
 
-                    <div className="space-y-2">
-                        <h1 className="text-2xl lg:text-3xl font-bold tracking-tight text-gray-900">Forgot Password?</h1>
-                        <p className="text-gray-500 text-sm">No worries! Enter your email and we'll send you a reset link</p>
+                    <div className="space-y-1">
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900">Forgot Password?</h1>
+                        <p className="text-gray-500 text-xs">No worries! Enter your email and we'll send you a reset link</p>
                     </div>
 
                     {/* Form */}
-                    <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); navigate('/reset-password'); }}>
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Email Address</Label>
+                    <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); navigate('/reset-password'); }}>
+                        <div className="space-y-1.5">
+                            <Label htmlFor="email" className="text-xs">Email Address</Label>
                             <div className="relative">
-                                <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                                <Mail className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
                                 <Input
                                     id="email"
                                     placeholder="Enter your email"
-                                    className="pl-10 h-10 bg-gray-50 border-gray-100 focus:bg-white transition-all"
+                                    className="pl-9 h-9 bg-gray-50 border-gray-100 focus:bg-white transition-all text-sm"
                                     required
                                 />
                             </div>
                         </div>
 
-                        <Button className="w-full h-11 bg-[#3B9DF8] hover:bg-blue-600 text-white font-semibold shadow-md text-base rounded-md mt-5">
+                        <Button className="w-full h-10 bg-[#3B9DF8] hover:bg-blue-600 text-white font-semibold shadow-md text-sm rounded-md mt-4">
                             Send Reset Link
                         </Button>
                     </form>

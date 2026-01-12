@@ -4,9 +4,9 @@ import Hero from '../components/Hero';
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-white font-sans">
+        <div className="min-h-screen lg:h-screen bg-white font-sans flex flex-col lg:overflow-hidden">
             <Navbar />
-            <main>
+            <main className="flex-1 flex flex-col justify-start lg:justify-center lg:items-center lg:min-h-0 scale-content-short">
                 <Hero />
             </main>
             {/* Background decoration - optional based on design (screenshot has some faint circles) */}
