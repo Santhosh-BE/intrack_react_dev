@@ -3,12 +3,18 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import Login from '../pages/Login';
+import ForgotPassword from '../pages/ForgotPassword';
+import ResetPassword from '../pages/ResetPassword';
+import ResetConfirmation from '../pages/ResetConfirmation';
 
 const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/reset-confirmation" element={<ResetConfirmation />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     );
